@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Kitob</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    body {
+    background-image: url('https://yt3.googleusercontent.com/hgRiUwm33buKPzBPgsYskXLX6CpUNeDS_f2nhnLgWZkvNsbloD_l0jLpv0lzXplAtY8lSEIKnZc=s900-c-k-c0x00ffffff-no-rj'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+   
+}
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.8em;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .play-button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .play-button:hover {
+      background-color: #0056b3;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 15px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/img/hq720.jpg" alt="Audio Kitob">
+    <div class="card-content">
+      <h3 class="card-title">"O'zbeklar"</h3>
+      <p class="card-description">Shukur Xolmirzayev</p>
+      <audio controls>
+        <source src="/img/O‘zbeklar (Shukur Xolmirzayev).mp3" type="audio/mpeg">
+        Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+      </audio>
+    </div>
+  </div>
+</body>
+</html>

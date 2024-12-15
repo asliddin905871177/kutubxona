@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eng Mashhur Kitoblar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #f4f4f9;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 400px;
+      max-height: 300px;
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.2em;
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .card-text {
+      font-size: 0.9em;
+      color: #666;
+      margin: 0 0 20px;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 0.9em;
+      color: #fff;
+      background: #007bff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3 ease;
+    }
+
+    .read-more:hover {
+      background: #0056b3;
+    }
+
+    .expanded-content {
+      display: none;
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 15px;
+    }
+    body {
+    background-image: url('https://yt3.googleusercontent.com/hgRiUwm33buKPzBPgsYskXLX6CpUNeDS_f2nhnLgWZkvNsbloD_l0jLpv0lzXplAtY8lSEIKnZc=s900-c-k-c0x00ffffff-no-rj'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+   
+}
+
+    .expanded-content p {
+      margin: 0 0 10px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid">
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="/img/don.jpg" alt="Kitob 1">
+    <div class="card-content">
+      <h2 class="card-title">"Don Kixot"</h2>
+      <p class="card-text">Migel de Servantesning dunyoga mashhur romani.</p>
+      <button class="read-more" onclick="toggleDetails(1)">Batafsil</button>
+      <div class="expanded-content" id="details-1">
+        <p>"Don Kixot" - 1605-yilda nashr etilgan va klassik adabiyotning eng buyuk asarlaridan biri hisoblanadi. U ritsarlik idealini hajv qilgan asar.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="/img/Lev_Tolstoy._Urush_va_tinchlik_roman.jpg" alt="Kitob 2">
+    <div class="card-content">
+      <h2 class="card-title">"Urush va tinchlik"</h2>
+      <p class="card-text">Lev Tolstoyning epik romani.</p>
+      <button class="read-more" onclick="toggleDetails(2)">Batafsil</button>
+      <div class="expanded-content" id="details-2">
+        <p>Lev Tolstoyning "Urush va tinchlik" asari 19-asr Rossiyasidagi jamiyat va urushni tasvirlaydi. Bu asar insoniy hayotni keng miqyosda o‘rganadi.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="/img/1984.jpg" alt="Kitob 3">
+    <div class="card-content">
+      <h2 class="card-title">"1984"</h2>
+      <p class="card-text">Jorj Oruellning distopik romani.</p>
+      <button class="read-more" onclick="toggleDetails(3)">Batafsil</button>
+      <div class="expanded-content" id="details-3">
+        <p>"1984" - Jorj Oruellning totalitar rejimlar haqidagi ogohlantiruvchi asari. Unda "Katta Aka" va nazorat ostidagi jamiyat tasvirlanadi.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card">
+    <img src="/img/hobbit.jpg" alt="Kitob 4">
+    <div class="card-content">
+      <h2 class="card-title">"Hobbit"</h2>
+      <p class="card-text">J.R.R. Tolkinning klassik fantastik romani.</p>
+      <button class="read-more" onclick="toggleDetails(4)">Batafsil</button>
+      <div class="expanded-content" id="details-4">
+        <p>"Hobbit" - Bilbo Bagginsning epik sarguzashtlarini tasvirlaydi. U fantastik adabiyotning asoschilaridan biri sifatida tanilgan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card">
+    <img src="/img/alkimyogar.jpg" alt="Kitob 5">
+    <div class="card-content">
+      <h2 class="card-title">"Alkimyogar"</h2>
+      <p class="card-text">Paulo Koeloning motivatsion romani.</p>
+      <button class="read-more" onclick="toggleDetails(5)">Batafsil</button>
+      <div class="expanded-content" id="details-5">
+        <p>"Alkimyogar" - inson orzulari va taqdirini topishga qaratilgan hikoya. U millionlab kitobxonlar qalbini zabt etgan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="card">
+    <img src="/img/images (2).jpg" alt="Kitob 6">
+    <div class="card-content">
+      <h2 class="card-title">"Harry Potter va Sehrgar Tosh"</h2>
+      <p class="card-text">J.K. Roulingning afsonaviy romani.</p>
+      <button class="read-more" onclick="toggleDetails(6)">Batafsil</button>
+      <div class="expanded-content" id="details-6">
+        <p>"Harry Potter va Sehrgar Tosh" sehr-joduga to‘la dunyo haqida hikoya qiladi. Bu roman global fenomen bo‘lib, yoshlar adabiyotining eng sevimli asarlaridan biridir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleDetails(cardId) {
+    const details = document.getElementById(`details-${cardId}`);
+    const button = details.previousElementSibling;
+    if (details.style.display === 'none' || !details.style.display) {
+      details.style.display = 'block';
+      button.textContent = 'Yopish';
+    } else {
+      details.style.display = 'none';
+      button.textContent = 'Batafsil';
+    }
+  }
+</script>
+
+</body>
+</html>

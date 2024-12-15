@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'tkir Hoshimov</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    body {
+    background-image: url('https://yt3.googleusercontent.com/hgRiUwm33buKPzBPgsYskXLX6CpUNeDS_f2nhnLgWZkvNsbloD_l0jLpv0lzXplAtY8lSEIKnZc=s900-c-k-c0x00ffffff-no-rj'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+   
+}
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .card-text {
+      font-size: 1em;
+      color: #666;
+      margin: 0 0 20px;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 1em;
+      color: #fff;
+      background: #007bff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .read-more:hover {
+      background: #0056b3;
+    }
+
+    .expanded-content {
+      display: none;
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 15px;
+    }
+
+    .expanded-content p {
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <img src="/img/Dostoevsky_1872.jpg" alt="O'tkir Hoshimov">
+  <div class="card-content">
+    <h2 class="card-title">Dostoevskiy</h2>
+    <p class="card-text"> Rus yozuvchisi. Ijodiy faoliyati 1844-yilda boshlangan</p>
+    <button class="read-more" onclick="toggleDetails()">Batafsil</button>
+    <div class="expanded-content" id="details">
+      <p> Birinchi romani — „Bechora odamlar“da (1846) xoʻrlangan, ijtimoiy adolatsizlikka duchor boʻlgan „kichkina odamlar“ning qismati hikoya qilingan. „Qiyofadosh“ (1846), „Oq tunlar“ (1848) qissalari ham ijtimoiy mavzuda. N. Dobrolyubov, V. Belinskiy kabi demokrat ziyolilarning inqilobiy gʻoyalariga mahliyo boʻlib qolgan D. 1847-yildan rus inqilobchisi va xayoliy sotsialisti M. V. Petrashevskiy toʻgaragiga faol qatnashib, xayoliy sotsializm gʻoyasini qoʻllab-quvvatlaydi. Mazkur toʻgarakda qatnashib, mavjud davlat tuzumini kuch ishlatib oʻzgartirishga harakat qilgani uchun D. oʻlim jazosiga xukm qilinadi (1849). Nufuzli davlat va jamoat arboblarining aralashuvidan soʻng, podsho Aleksandr II oʻlim jazosini 4 yillik katorga surguni bilan almashtiradi. Yozuvchi Omsk katorga qamoqxonasida (1850—54) va Semipalatinskda intizomiy harbiy xizmatda boʻldi (1854—59). 1859-yildan Peterburgda Uzoq muddatli tutqunlik va surgun D. ijodida oʻz ifodasini topadi, tushkunlik ustuvor mavzuga aylanadi.</p>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleDetails() {
+    const details = document.getElementById('details');
+    const button = document.querySelector('.read-more');
+    if (details.style.display === 'none' || !details.style.display) {
+      details.style.display = 'block';
+      button.textContent = 'Yopish';
+    } else {
+      details.style.display = 'none';
+      button.textContent = 'Batafsil';
+    }
+  }
+</script>
+
+</body>
+</html>

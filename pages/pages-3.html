@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Kitoblar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+    background-image: url('https://yt3.googleusercontent.com/hgRiUwm33buKPzBPgsYskXLX6CpUNeDS_f2nhnLgWZkvNsbloD_l0jLpv0lzXplAtY8lSEIKnZc=s900-c-k-c0x00ffffff-no-rj'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+   
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .card-description {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .play-button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .play-button:hover {
+      background-color: #0056b3;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="/img/Nodar_Dumbadze._Hellados.jpg" alt="Audio Kitob 1">
+      <div class="card-content">
+        <h3 class="card-title">"Hellados"</h3>
+        <p class="card-description">Nodar Dumbadze</p>
+        <button class="play-button" onclick="toggleAudio(1)">Tinglash</button>
+        <audio id="audio-1" controls>
+          <source src="/img/Hellados (Nodar Dumbadze).mp3" type="audio/mpeg">
+          Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+        </audio>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/Lev_Tolstoy._Urush_va_tinchlik_roman.jpg" alt="Audio Kitob 2">
+      <div class="card-content">
+        <h3 class="card-title">"Urush va Tinchlik"</h3>
+        <p class="card-description">Lev Tolstoyning epik romani.</p>
+        <button class="play-button" onclick="toggleAudio(2)">Tinglash</button>
+        <audio id="audio-2" controls>
+          <source src="audio/urush_va_tinchlik.mp3" type="audio/mpeg">
+          Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+        </audio>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/1984.jpg" alt="Audio Kitob 3">
+      <div class="card-content">
+        <h3 class="card-title">"1984"</h3>
+        <p class="card-description">Jorj Oruellning distopik romani.</p>
+        <button class="play-button" onclick="toggleAudio(3)">Tinglash</button>
+        <audio id="audio-3" controls>
+          <source src="audio/1984.mp3" type="audio/mpeg">
+          Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+        </audio>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/hobbit.jpg" alt="Audio Kitob 4">
+      <div class="card-content">
+        <h3 class="card-title">"Hobbit"</h3>
+        <p class="card-description">J.R.R. Tolkinning klassik fantastik romani.</p>
+        <button class="play-button" onclick="toggleAudio(4)">Tinglash</button>
+        <audio id="audio-4" controls>
+          <source src="audio/hobbit.mp3" type="audio/mpeg">
+          Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+        </audio>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/alkimyogar.jpg" alt="Audio Kitob 5">
+      <div class="card-content">
+        <h3 class="card-title">"Alkimyogar"</h3>
+        <p class="card-description">Paulo Koeloning motivatsion romani.</p>
+        <button class="play-button" onclick="toggleAudio(5)">Tinglash</button>
+        <audio id="audio-5" controls>
+          <source src="audio/alkimyogar.mp3" type="audio/mpeg">
+          Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+        </audio>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img/images (2).jpg" alt="Audio Kitob 6">
+      <div class="card-content">
+        <h3 class="card-title">"Harry Potter va Sehrgar Tosh"</h3>
+        <p class="card-description">J.K. Roulingning afsonaviy romani.</p>
+        <button class="play-button" onclick="toggleAudio(6)">Tinglash</button>
+        <audio id="audio-6" controls>
+          <source src="audio/harry_potter.mp3" type="audio/mpeg">
+          Sizning brauzeringiz audio pleerni qo‘llab-quvvatlamaydi.
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAudio(id) {
+      const audio = document.getElementById(`audio-${id}`);
+      const allAudios = document.querySelectorAll("audio");
+      allAudios.forEach(a => {
+        if (a !== audio) {
+          a.pause();
+        }
+      });
+      audio.style.display = audio.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

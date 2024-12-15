@@ -1,0 +1,182 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Background */
+body {
+    background-image: url('https://yt3.googleusercontent.com/hgRiUwm33buKPzBPgsYskXLX6CpUNeDS_f2nhnLgWZkvNsbloD_l0jLpv0lzXplAtY8lSEIKnZc=s900-c-k-c0x00ffffff-no-rj'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+   
+}
+
+/* Header Styling */
+header {
+    background-color: #003366; /* Dark navy blue */
+    color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: linear-gradient(45deg, #003366, #004f8c); /* Gradient background */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Navigation Menu Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    background-color: #f0e68c; /* Light goldenrod color */
+    color: #003366; /* Dark blue for contrast */
+    transform: translateY(-5px);
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-left: 10px solid #003366;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Different Section Colors */
+#authors { border-left-color: #8b4513; }
+#books { border-left-color: #4682b4; }
+#pdf-books { border-left-color: #2e8b57; }
+#audio-books { border-left-color: #6a5acd; }
+#uzbek-literature { border-left-color: #b22222; }
+#world-literature { border-left-color: #daa520; }
+#religious-books { border-left-color: #556b2f; }
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .section {
+        padding: 40px 20px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+footer .social-links {
+    margin-top: 15px;
+}
+
+footer .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+footer .social-icon:hover {
+    color: #f0e68c; /* Light goldenrod color */
+    transform: translateY(-5px);
+}
+
+footer .social-icon.facebook:hover {
+    color: #3b5998; /* Facebook blue */
+}
+
+footer .social-icon.instagram:hover {
+    color: #e4405f; /* Instagram pink */
+}
+
+footer .social-icon.twitter:hover {
+    color: #1da1f2; /* Twitter blue */
+}
+
+footer .social-icon.linkedin:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+
